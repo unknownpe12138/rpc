@@ -8,10 +8,10 @@ import com.kapibala.rpc.proxy.ServiceProxyFactory;
  */
 public class EasyConsumerExample {
     public static void main(String[] args) {
-        // todo 需要获取 UserService 的实现类对象
-        UserService userService = null;
+        // 需要获取 UserService 的实现类对象
+        UserService userService = ServiceProxyFactory.getProxy(UserService.class);
         User user = new User();
-        user.setName("yupi");
+        user.setName("kapibala");
         // 调用
         User newUser = userService.getUser(user);
         if (newUser != null) {
