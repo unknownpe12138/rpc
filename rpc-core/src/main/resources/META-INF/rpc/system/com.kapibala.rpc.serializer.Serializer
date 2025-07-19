@@ -1,0 +1,4 @@
+jdk=com.kapibala.rpc.serializer.JdkSerializer
+hessian=com.kapibala.rpc.serializer.HessianSerializer
+json=com.kapibala.rpc.serializer.JsonSerializer
+kryo=com.kapibala.rpc.serializer.KryoSerializer

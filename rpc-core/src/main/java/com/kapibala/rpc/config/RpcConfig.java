@@ -1,5 +1,6 @@
 package com.kapibala.rpc.config;
 
+import com.kapibala.rpc.serializer.SerializerKeys;
 import lombok.Data;
 /**
  * RPC 框架配置
@@ -28,5 +29,11 @@ public class RpcConfig {
      * 模拟调用
      */
     private boolean mock = false;
+
+    /**
+     * 序列化器
+     */
+    private String serializer = SerializerKeys.JDK;
+
 }
 
