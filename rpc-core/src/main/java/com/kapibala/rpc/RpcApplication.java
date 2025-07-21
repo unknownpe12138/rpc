@@ -1,7 +1,10 @@
 package com.kapibala.rpc;
 
+import com.kapibala.rpc.config.RegistryConfig;
 import com.kapibala.rpc.config.RpcConfig;
 import com.kapibala.rpc.constant.RpcConstant;
+import com.kapibala.rpc.registry.Registry;
+import com.kapibala.rpc.registry.RegistryFactory;
 import com.kapibala.rpc.utils.ConfigUtils;
 import lombok.extern.slf4j.Slf4j;
 /**
@@ -19,6 +22,11 @@ public class RpcApplication {
     public static void init(RpcConfig newRpcConfig) {
         rpcConfig = newRpcConfig;
         log.info("rpc init, config = {}", newRpcConfig.toString());
+        // 注册中心初始化
+        RegistryConfig registryConfig = rpcConfig.getRegistryConfig();
+        Registry registry = RegistryFactory.getInstance(registryConfig.getRegistry());
+        registry.init(registryConfig);
+        log.info("registry init, config = {}", registryConfig);
     }
     /**
      * 初始化

@@ -8,7 +8,7 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 
 /**
- * Kryo 序列化器
+ * Kryo 序列化器（有问题）
  *
  */
 public class KryoSerializer implements Serializer {

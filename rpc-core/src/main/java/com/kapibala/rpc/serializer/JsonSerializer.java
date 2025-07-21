@@ -7,7 +7,7 @@ import com.kapibala.rpc.model.RpcResponse;
 import java.io.IOException;
 
 /**
- * Json 序列化器
+ * Json 序列化器（有问题）
  *
  */
 public class JsonSerializer implements Serializer {
