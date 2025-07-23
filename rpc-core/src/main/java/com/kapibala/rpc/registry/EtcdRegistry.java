@@ -126,10 +126,10 @@ public class EtcdRegistry implements Registry {
             }
         }
         // 释放资源
-        if(kvClient!=null){
+        if (kvClient != null) {
             kvClient.close();
         }
-        if(client!=null){
+        if (client != null) {
             client.close();
         }
     }

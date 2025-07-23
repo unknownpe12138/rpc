@@ -10,6 +10,7 @@ import com.kapibala.rpc.registry.Registry;
 import com.kapibala.rpc.registry.RegistryFactory;
 import com.kapibala.rpc.server.HttpServer;
 import com.kapibala.rpc.server.VertxHttpServer;
+import com.kapibala.rpc.server.tcp.VertxTcpServer;
 
 public class ProviderExample {
     public static void main(String[] args) {
@@ -37,5 +38,9 @@ public class ProviderExample {
         // 启动 web 服务
         HttpServer httpServer = new VertxHttpServer();
         httpServer.doStart(RpcApplication.getRpcConfig().getServerPort());
+
+//        VertxTcpServer vertxTcpServer = new VertxTcpServer();
+//        vertxTcpServer.doStart(8080);
+
     }
 }
