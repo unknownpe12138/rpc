@@ -1,5 +1,7 @@
 package com.kapibala.rpc.config;
 
+import com.kapibala.rpc.fault.retry.RetryStrategyKeys;
+import com.kapibala.rpc.fault.tolerant.TolerantStrategyKeys;
 import com.kapibala.rpc.loadbalancer.LoadBalancerKeys;
 import com.kapibala.rpc.serializer.SerializerKeys;
 import lombok.Data;
@@ -46,5 +48,14 @@ public class RpcConfig {
      */
     private String loadBalancer = LoadBalancerKeys.ROUND_ROBIN;
 
+    /**
+     * 重试策略
+     */
+    private String retryStrategy = RetryStrategyKeys.NO;
+
+    /**
+     * 容错机制
+     */
+    private String tolerantStrategy = TolerantStrategyKeys.FAIL_FAST;
 }
 

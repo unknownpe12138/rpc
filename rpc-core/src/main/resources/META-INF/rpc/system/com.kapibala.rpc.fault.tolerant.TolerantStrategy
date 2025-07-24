@@ -1,0 +1,4 @@
+failBack=com.kapibala.rpc.fault.tolerant.FailBackTolerantStrategy
+failFast=com.kapibala.rpc.fault.tolerant.FailFastTolerantStrategy
+failOver=com.kapibala.rpc.fault.tolerant.FailOverTolerantStrategy
+failSafe=com.kapibala.rpc.fault.tolerant.FailSafeTolerantStrategy
